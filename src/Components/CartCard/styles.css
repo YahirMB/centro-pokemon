@@ -1,0 +1,81 @@
+.cart-card-container {
+    width: 250px;
+    height: auto;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 1px 1px 5px 1px #e3e3e3;
+    transition: ease-out .1s;
+    position: relative;
+}
+
+.img-pokemon {
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    padding: 20px;
+}
+
+.title-cart-card {
+    text-align: center;
+}
+
+.cart-card-body {
+    padding: 10px;
+    border-top: 1px solid lightgray;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+.pokemon-price {
+    /* margin-top: 15px; */
+    color: limegreen;
+    font-size: 18px;
+}
+
+.cart-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.but-delete-product {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: none;
+}
+
+.cart-card-container:hover .but-delete-product {
+    display: block;
+}
+
+
+.but-delete-product i {
+    color: red;
+    font-size: 20px;
+}
+
+.plus-product,
+.less-product {
+    background-color: #272727;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.plus-product i {
+    font-size: 20px;
+    /* padding: 2px; */
+}
+
+.less-product i {
+    font-size: 20px;
+    /* padding: 2px; */
+}

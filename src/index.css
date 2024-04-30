@@ -1,3 +1,29 @@
+:root {
+	--color-fire: #ff0202;
+	--color-grass: #9bcc50;
+	--color-steel: #9eb7b8;
+	--color-water: #4592c4;
+	--color-psychic: #f366b9;
+	--color-ground: #ab9842;
+	--color-ice: #51c4e7;
+	--color-flying: #3dc7ef;
+	--color-ghost: #4d5b64;
+	--color-normal: #a4acaf;
+	--color-poison: #7e0058;
+	--color-rock: #756417;
+	--color-fighting: #d56723;
+	--color-dark: #1f1e1e;
+	--color-bug: #729f3f;
+	--color-dragon: linear-gradient(180deg, #53a4cf 50%, #f16e57 50%);
+	--color-electric: #bba909;
+	--color-fairy: #fdb9e9;
+	--color-shadow: #7b62a3;
+	--color-unknow: #757575;
+
+	--color-primary: #006d77;
+	--color-primary-hover: #83c5be;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +31,96 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: #535353;
+  /* color-scheme: light dark; */
+  /* background-color: rgb(8, 13, 27); */
+  
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+p{
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6{
+  margin: 0;
+}
+
+
+
+/* Types of Pokemon */
+.water {
+	background-color: var(--color-water);
+}
+
+.grass {
+	background-color: var(--color-grass);
+}
+
+.poison {
+	background-color: var(--color-poison);
+}
+
+.fire {
+	background-color: var(--color-fire);
+}
+
+.bug {
+	background-color: var(--color-bug);
+}
+
+.dragon {
+	background: var(--color-dragon);
+}
+
+.flying {
+	background-color: var(--color-flying);
+}
+
+.ground {
+	background-color: var(--color-ground);
+}
+
+.steel {
+	background-color: var(--color-steel);
+}
+
+.psychic {
+	background-color: var(--color-psychic);
+}
+
+.ice {
+	background-color: var(--color-ice);
+}
+
+.ghost {
+	background-color: var(--color-ghost);
+}
+
+.normal {
+	background-color: var(--color-normal);
+}
+
+.rock {
+	background-color: var(--color-rock);
+}
+
+.electric {
+	background-color: var(--color-electric);
+}
+
+.fighting {
+	background-color: var(--color-fighting);
+}
+
+.fairy {
+	background-color: var(--color-fairy);
+}
+
+.dark {
+	background-color: var(--color-dark);
 }

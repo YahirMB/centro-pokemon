@@ -1,0 +1,11 @@
+
+.input{
+    height: 50px;
+    border-radius: 28px;
+    padding: 20px;
+    border: 1px solid gray;
+}
+
+.input:focus{
+    outline-color: rgb(52, 173, 253);
+}

@@ -1,0 +1,38 @@
+.cart-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.product-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 250px));
+    padding: 0px 20px 20px 0;
+    gap: 20px;
+    width: 70%;
+}
+
+.info-box {
+    justify-self: center;
+    width: 30%;
+
+}
+
+.cart-info {
+    background-color: #272727;
+    color: white;
+    padding: 20px;
+    width: 300px;
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 8px;
+}
+
+.detail-row{
+    display: flex;
+    justify-content: space-between;
+}
