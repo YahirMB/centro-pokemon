@@ -1,12 +1,21 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './styles.css'
 import { useForm } from 'react-hook-form'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
+import { PokemonContext } from '../../Context/PokemonContext'
 export const SignIn = () => {
 
   const { register, handleSubmit } = useForm()
-  const onSubmit = (data) => {
-    console.log(data)
+  const { signUp } = useContext(PokemonContext)
+  const navigate = useNavigate();
+
+  const onSubmit = async (data) => {
+
+    const resp = await signUp(data);
+
+    if (resp.response == 201) {
+      navigate('/')
+    }
   }
 
   return (

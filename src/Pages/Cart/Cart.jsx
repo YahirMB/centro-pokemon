@@ -18,8 +18,6 @@ export const Cart = () => {
         setSumaTotal(parseFloat(total.toFixed(2)));
     }, [pokemonsCart])
 
-
-    console.log(sumaTotal)
     return (
 
 
@@ -40,7 +38,7 @@ export const Cart = () => {
                                             img={pokemon.sprites.other.dream_world.front_default}
                                             types={pokemon.types}
                                             key={pokemon.id}
-                                            id={pokemon.id}
+                                            id={pokemon.productId}
                                             name={name}
                                             event={deleteCartPokemon}
                                         />

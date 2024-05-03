@@ -10,24 +10,27 @@ import { useNavigate } from 'react-router-dom'
 
 export const Home = () => {
   const navigate = useNavigate()
-  const { pokemons, pokemonsCart, onNextPage, onPrevPage, conterPage,logOut } = useContext(PokemonContext);
+  const { pokemons, pokemonsCart, onNextPage, onPrevPage, conterPage, logOut,getPokemonsOfCart } = useContext(PokemonContext);
   const [value, setValue] = useState('');
   const [searchPokemos, setSearchPokemons] = useState(pokemons)
 
   const onSeeCart = () => {
     navigate('/cart')
+    const user = JSON.parse(localStorage.getItem('user_data'))
+    getPokemonsOfCart(user.id)
   }
 
   useEffect(() => {
     setSearchPokemons(pokemons)
   }, [pokemons])
 
-  const onLogOut = async() => {
-    const {response} = await logOut()
+  const onLogOut = async () => {
+    const { response } = await logOut()
 
-    if(response === 200){
+    if (response === 200) {
       navigate('/')
       localStorage.removeItem('user_token');
+      localStorage.removeItem('user_data');
     }
   }
 
@@ -37,11 +40,9 @@ export const Home = () => {
       pokemos => pokemos.name.toLowerCase().includes(text.toLowerCase())
         || pokemos.id.toString() === text
     );
-    console.log(text)
     setValue(e.target.value)
     setSearchPokemons(data);
   }
-
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column' }}>
@@ -53,8 +54,8 @@ export const Home = () => {
           value={value}
         />
         <div className='login'>
-          <p 
-            style={{cursor:'pointer'}}
+          <p
+            style={{ cursor: 'pointer' }}
             onClick={onLogOut}>LogOut</p>
           <div style={{ position: 'relative', cursor: 'pointer' }}>
             <i className="bi bi-cart" onClick={onSeeCart}></i>

@@ -11,11 +11,12 @@ export const LogIn = () => {
 
     const { register, handleSubmit } = useForm()
     const onSubmit = async (data) => {
-        const user = await login(data)
+        const resp = await login(data)
         
-        if (user.response === 200 && user.data.access_token) {
+        if (resp.response === 200 && resp.data.access_token) {
             navigate('/home');
-            localStorage.setItem('user_token', user.data.access_token);
+            localStorage.setItem('user_token', resp.data.access_token);
+            localStorage.setItem('user_data', JSON.stringify(resp.data.user))
         }else{
             alert('Verifica los campos')
         }

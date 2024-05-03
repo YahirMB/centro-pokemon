@@ -15,11 +15,12 @@ export const RoutesApp = () => {
 
     useEffect(() => {
         const user = localStorage.getItem('user_token');
-        console.log(user)
         setIsLoggedIn(user !== null);
 
         if (isLoggedIn) {
             navigate('/home');
+        }else{
+            navigate('/');
         }
     }, [isLoggedIn]);
 
